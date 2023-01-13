@@ -11,7 +11,9 @@ app.use(express.json());
 app.use('/api/v1/customers', customerRouter);
 
 app.get('/', (req, res) => {
-  res.send('<h2>Hello there</h2>');
+  res.send(
+    '<h2>Please use following route to work with customers: "http://localhost:5000/api/v1/customers/"</h2>'
+  );
 });
 
 const port = process.env.PORT || 5000;
